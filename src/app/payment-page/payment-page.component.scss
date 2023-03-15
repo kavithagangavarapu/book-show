@@ -1,0 +1,67 @@
+.instructions {
+  border: 1px solid;
+  border-radius: 5px;
+  // width: 60%;
+  margin: 25px;
+  padding: 25px;
+}
+
+.payment {
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.total {
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 25px 25px 25px 40px;
+  padding: 25px;
+}
+
+.custom-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+}
+
+.button:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.no-margin {
+  margin-bottom: 0;
+}
+
+.visa {
+  display: flex;
+}
+
+.cvv {
+  height: 40px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100px;
+}
+
+.cvv-image {
+  height: 26px;
+  margin-left: 6px;
+}

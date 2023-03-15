@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="instructions">
+                    <h1>Delivery</h1>
+                    <p>Mobile Entry - Free</p>
+                    <p>Tickets Available by Sun Apr 3, 2022</p>
+                    <p>These mobile tickets will be transferred directly to you from a trusted seller. We'll email
+                        you instructions on how to accept them on the orignal ticket provider's mobile app.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="payment">
+                    <h1>Payment</h1>
+                    <h1>Use Credit/Debit Card</h1>
+                    <div>
+                        <div class="visa">
+                            <span>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button id="radio" color="primary" value="1"></mat-radio-button>
+                                </mat-radio-group>
+                            </span>
+                            <span>
+                                <img src="https://i.imgur.com/W1vtnOV.png" width="30">
+                            </span>
+                            <span style="margin-left: 25px;">
+                                <h3 class="no-margin">Visa - 9999</h3>
+                                <p class="no-margin">User Name | exp. 00/11</p>
+                                <p class="no-margin">
+                                    <a href="" style="text-decoration: none;">Edit</a> |
+                                    <a href="" style="text-decoration: none;">Delete</a>
+                                </p>
+                            </span>
+                        </div>
+                        <div style="margin-left: 25px;">
+                            <p>Security Code</p>
+                            <div>
+                                <span>
+                                    <input class="cvv" type="password" id="cvv" name="cvv" maxlength="3" minlength="3">
+                                    <img class="cvv-image" src="../../assets/images/credit-card.png">
+                                    <span style="margin-left: 8px;">3 digits on back of the card</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="new-card">
+                        <img style="height:22px" src="../../assets/images/icons8-add-50.png">
+                        <img style="height: 26px;margin-left: 8px;" src="../../assets/images/visa.png">
+                        <a href="" style="text-decoration: none;margin-left: 12px;">Add New Card</a>
+                    </div>
+                    <hr>
+                    <div>
+                        <h2>Or Pay With</h2>
+                        <span>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button id="radio-1" color="primary" value="1">Cash</mat-radio-button>
+                            </mat-radio-group>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="total">
+                <div class="custom-flex">
+                    <h1>Total</h1>
+                    <h1>${{priceWithTax}}</h1>
+                </div>
+                <div>
+                    <p>Tickets</p>
+                    <div class="custom-flex">
+                        <p>Resale Tickets : ${{ticketPrice}}.00 * {{noOfSeats}}</p>
+                        <p>${{priceWithoutTax}}</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Notes From Seller</h2>
+                    <p>xfr XFER Proof of at least one dose of COVID-19
+                        vaccination for ages 5 to 11 and guests ages 12 and up
+                        will be required to show proof of two COVID-19 vaccine
+                        doses or one dose of the Johnson & Johnson vaccine.
+                        Masks must be worn.</p>
+                </div>
+                <div>
+                    <h2>Fees</h2>
+                    <div class="custom-flex">
+                        <p>Service Fee: $44.08 x {{noOfSeats}}</p>
+                        <p>${{serviceFee | number : '1.2-2'}} </p>
+                    </div>
+                    <div class="custom-flex">
+                        <p>Order Processing Fee</p>
+                        <p>$2.95</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Delivery</h2>
+                    <div class="custom-flex">
+                        <p>Mobile Entry</p>
+                        <p>Free</p>
+                    </div>
+                </div>
+                <p><a href="#" style="text-decoration: none;" (click)="routeToDashboard()">Cancel Order</a></p>
+                <p>*All Sales Final - No Refunds</p>
+                <p>
+                    <mat-checkbox [(ngModel)]="checked" color="primary" class="example-margin">I have read and agree to
+                        the current <a href="#" style="text-decoration: none;"> Terms
+                            of Use.</a>
+                    </mat-checkbox>
+                </p>
+                <div>
+                    <button class="button" [disabled]="!checked" mat-stroked-button>Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

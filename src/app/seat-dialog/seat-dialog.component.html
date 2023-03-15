@@ -1,0 +1,11 @@
+<div>
+    <h1 mat-dialog-title class="title">How Many Seats ?</h1>
+
+    <div class="seat-count-div">
+        <input class="seat-count" type="text" id="seat-count" name="seat-count" [formControl]="seatCount">
+    </div>
+
+    <div style="text-align: center;">
+        <button class="custom-button" mat-flat-button (click)="confirmSeats()">Select Seats</button>
+    </div>
+</div>
